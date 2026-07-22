@@ -1,4 +1,4 @@
-import StandaloneShell from '@/components/StandaloneShell';
+import StandaloneShell from '../../../components/StandaloneShell';
 
 export const metadata = {
   title: 'Studio — Open Generative AI',
