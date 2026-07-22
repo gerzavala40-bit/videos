@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luciana & Gonzalo - Boda</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&family=Great+Vibes&display=swap');
+
+:root {
+  --color-cream: #faf8f5;
+  --color-sage: #8b9e7c;
+  --color-sage-light: #b5c4a8;
+  --color-blush: #e8c4b8;
+  --color-gold: #c9a96e;
+  --color-text: #4a4a4a;
+  --color-text-light: #7a7a7a;
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Lato', sans-serif;
+  --font-script: 'Great Vibes', cursive;
+}
+
+html, body {
+  font-family: var(--font-body);
+  background: var(--color-cream);
+  color: var(--color-text);
+  overflow-x: hidden;
+}
+
+/* COVER SECTION */
+.cover {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(180deg, #f5ede6 0%, #faf8f5 50%, #f0ebe4 100%);
+  padding: 60px 30px;
+  position: relative;
+}
+
+.cover::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(139,158,124,0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(232,196,184,0.1) 0%, transparent 50%);
+}
+
+.cover-flower {
+  font-size: 48px;
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+
+.cover-subtitle {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-sage);
+  margin-bottom: 10px;
+}
+
+.cover-title {
+  font-family: var(--font-script);
+  font-size: 52px;
+  color: var(--color-text);
+  line-height: 1.2;
+  margin-bottom: 5px;
+}
+
+.cover-ampersand {
+  font-family: var(--font-script);
+  font-size: 36px;
+  color: var(--color-gold);
+  margin: 5px 0;
+}
+
+.cover-date {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 4px;
+  color: var(--color-text-light);
+  margin-top: 25px;
+}
+
+.cover-btn {
+  margin-top: 40px;
+  padding: 14px 40px;
+  border: 1.5px solid var(--color-sage);
+  background: transparent;
+  color: var(--color-sage);
+  font-family: var(--font-body);
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.cover-hint {
+  margin-top: 15px;
+  font-size: 11px;
+  color: var(--color-text-light);
+  letter-spacing: 1px;
+}
+
+/* SECTION STYLES */
+section {
+  padding: 80px 30px;
+  text-align: center;
+}
+
+.section-tag {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-sage);
+  margin-bottom: 8px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+
+.section-text {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--color-text-light);
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* STORY SECTION */
+.story {
+  background: linear-gradient(180deg, var(--color-cream) 0%, #f0ebe4 100%);
+}
+
+.story-quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 22px;
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+
+/* CELEBRATION SECTION */
+.celebration {
+  background: #fff;
+}
+
+.info-card {
+  background: var(--color-cream);
+  border-radius: 16px;
+  padding: 30px 20px;
+  margin: 20px 0;
+  border: 1px solid rgba(139,158,124,0.15);
+}
+
+.info-card-icon {
+  font-size: 24px;
+  color: var(--color-sage);
+  margin-bottom: 12px;
+}
+
+.info-card-title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.info-card-text {
+  font-size: 14px;
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+.map-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--color-sage);
+  font-size: 13px;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+/* DRESS CODE */
+.dresscode {
+  background: linear-gradient(180deg, #f5ede6 0%, var(--color-cream) 100%);
+}
+
+.dresscode-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 35px 25px;
+  margin-top: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+
+.dresscode-icon {
+  font-size: 28px;
+  color: var(--color-gold);
+  margin-bottom: 12px;
+}
+
+.dresscode-name {
+  font-family: var(--font-display);
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.dresscode-desc {
+  font-size: 13px;
+  color: var(--color-text-light);
+  margin-bottom: 15px;
+}
+
+.color-dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.color-dot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.color-dot span:first-child {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: block;
+  border: 2px solid rgba(0,0,0,0.05);
+}
+
+.color-dot span:last-child {
+  font-size: 10px;
+  color: var(--color-text-light);
+}
+
+/* GIFTS */
+.gifts {
+  background: #fff;
+}
+
+.gift-card {
+  background: var(--color-cream);
+  border-radius: 16px;
+  padding: 30px 20px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.gift-label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-sage);
+  margin-bottom: 6px;
+}
+
+.gift-value {
+  font-family: var(--font-display);
+  font-size: 18px;
+  color: var(--color-text);
+  margin-bottom: 4px;
+}
+
+.gift-detail {
+  font-size: 12px;
+  color: var(--color-text-light);
+  margin-bottom: 12px;
+}
+
+.gift-btn {
+  display: inline-block;
+  padding: 10px 24px;
+  background: var(--color-sage);
+  color: #fff;
+  border-radius: 20px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* RSVP */
+.rsvp {
+  background: linear-gradient(180deg, var(--color-cream) 0%, #f0ebe4 100%);
+}
+
+.rsvp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 32px;
+  background: #25d366;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 25px;
+}
+
+/* GALLERY */
+.gallery {
+  background: #fff;
+  padding-bottom: 60px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 25px;
+  padding: 0 10px;
+}
+
+.gallery-item {
+  background: linear-gradient(135deg, var(--color-sage-light) 0%, var(--color-blush) 100%);
+  border-radius: 12px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #fff;
+  font-weight: 300;
+}
+
+.gallery-item.large {
+  grid-column: span 2;
+  aspect-ratio: 2/1;
+}
+
+.gallery-hashtag {
+  font-family: var(--font-display);
+  font-size: 20px;
+  color: var(--color-sage);
+  margin-top: 30px;
+}
+
+.gallery-hashtag-hint {
+  font-size: 12px;
+  color: var(--color-text-light);
+  margin-top: 8px;
+}
+
+/* FOOTER */
+.footer {
+  padding: 80px 30px;
+  text-align: center;
+  background: linear-gradient(180deg, #f0ebe4 0%, #e8e0d8 100%);
+}
+
+.footer-flower {
+  font-size: 36px;
+  opacity: 0.6;
+  margin-bottom: 20px;
+}
+
+.footer-quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--color-text);
+  margin-bottom: 15px;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: var(--color-text-light);
+  margin-bottom: 10px;
+}
+
+.footer-names {
+  font-family: var(--font-script);
+  font-size: 32px;
+  color: var(--color-text);
+  margin: 15px 0;
+}
+
+.footer-date {
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: var(--color-text-light);
+}
+
+/* COUNTDOWN */
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-number {
+  font-family: var(--font-display);
+  font-size: 32px;
+  color: var(--color-sage);
+  line-height: 1;
+}
+
+.countdown-label {
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  margin-top: 4px;
+}
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<section class="cover">
+  <div class="cover-flower">&#10048;</div>
+  <div class="cover-subtitle">Bienvenida</div>
+  <div class="cover-title" style="font-size:22px; font-family: var(--font-display); font-style:italic;">&#161;Nos casamos!</div>
+  <div class="cover-title">Luciana</div>
+  <div class="cover-ampersand">&amp;</div>
+  <div class="cover-title">Gonzalo</div>
+  <div class="cover-date">14 &middot; 03 &middot; 2027</div>
+  <div class="cover-btn">Abrir invitaci&oacute;n</div>
+  <div class="cover-hint">Toc&aacute; para entrar</div>
+</section>
+
+<!-- MAIN INTRO -->
+<section style="padding:60px 30px; background: linear-gradient(180deg, #faf8f5, #fff);">
+  <div class="section-tag" style="font-size:22px; font-family: var(--font-display); font-style:italic;">&#161;Nos casamos!</div>
+  <div style="font-family: var(--font-script); font-size:42px; margin:15px 0;">Luciana <span style="color:var(--color-gold)">&amp;</span> Gonzalo</div>
+  <div style="font-size:13px; color:var(--color-text-light); letter-spacing:1px;">| 14 de marzo de 2027 | 17:30 hs |</div>
+  <p class="section-text" style="margin-top:20px;">Los esperamos con muchas ganas de divertirse en:<br><strong>Quinta Los Robles, Pilar, Buenos Aires</strong></p>
+  
+  <div class="countdown">
+    <div class="countdown-item">
+      <span class="countdown-number">236</span>
+      <span class="countdown-label">D&iacute;as</span>
+    </div>
+    <div class="countdown-item">
+      <span class="countdown-number">14</span>
+      <span class="countdown-label">Horas</span>
+    </div>
+    <div class="countdown-item">
+      <span class="countdown-number">32</span>
+      <span class="countdown-label">Min</span>
+    </div>
+    <div class="countdown-item">
+      <span class="countdown-number">08</span>
+      <span class="countdown-label">Seg</span>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story">
+  <div class="story-quote">Despu&eacute;s de siete primaveras&hellip;</div>
+  <p class="section-text">Queremos celebrarlo con quienes m&aacute;s queremos.</p>
+</section>
+
+<!-- CELEBRATION -->
+<section class="celebration">
+  <div class="section-tag">La celebraci&oacute;n</div>
+  <div class="section-title">&iquest;Cu&aacute;ndo &amp; d&oacute;nde?</div>
+  <p class="section-text">Todo listo para una noche inolvidable.</p>
+
+  <div class="info-card">
+    <div class="info-card-icon">&#9670;</div>
+    <div class="info-card-title">&iquest;Cu&aacute;ndo?</div>
+    <div class="info-card-text">S&aacute;bado 14 de marzo de 2027<br>17:30 hs</div>
+  </div>
+
+  <div class="info-card">
+    <div class="info-card-icon">&#9678;</div>
+    <div class="info-card-title">&iquest;D&oacute;nde?</div>
+    <div class="info-card-text">Quinta Los Robles<br>Pilar, Buenos Aires</div>
+    <a class="map-link" href="#">C&oacute;mo llegar &rarr;</a>
+  </div>
+</section>
+
+<!-- DRESS CODE -->
+<section class="dresscode">
+  <div class="section-tag">C&oacute;digo de vestimenta</div>
+  <div class="section-title">Dress code</div>
+
+  <div class="dresscode-card">
+    <div class="dresscode-icon">&#9671;</div>
+    <div class="dresscode-name">Elegante campestre</div>
+    <div class="dresscode-desc">Colores suaves y tonos tierra</div>
+    <div class="color-dots">
+      <div class="color-dot">
+        <span style="background:#d4c5a9;"></span>
+        <span>Beige</span>
+      </div>
+      <div class="color-dot">
+        <span style="background:#8b9e7c;"></span>
+        <span>Verde</span>
+      </div>
+      <div class="color-dot">
+        <span style="background:#e8c4b8;"></span>
+        <span>Flores</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GIFTS -->
+<section class="gifts">
+  <div class="section-tag">Informaci&oacute;n</div>
+  <div class="section-title">Mesa de regalos</div>
+  <p class="section-text">Tu presencia es el mejor regalo. Si dese&aacute;s sumar un detalle:</p>
+
+  <div class="gift-card">
+    <div class="gift-label">Alias</div>
+    <div class="gift-value">luciana.gonzalo.boda</div>
+    <div class="gift-detail">CVU / CBU: 0000003100022222222222</div>
+    <div class="gift-detail">Titular: Luciana Fern&aacute;ndez</div>
+    <button class="gift-btn">Copiar alias</button>
+  </div>
+</section>
+
+<!-- RSVP -->
+<section class="rsvp">
+  <div class="section-tag">Tu respuesta</div>
+  <div class="section-title">Confirm&aacute; tu asistencia</div>
+  <p class="section-text">Por favor respond&eacute; antes del 1 de marzo de 2027.</p>
+  <a class="rsvp-btn" href="#">&#128172; Confirmar por WhatsApp</a>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery">
+  <div class="section-tag">Momentos</div>
+  <div class="section-title">Galer&iacute;a</div>
+  <p class="section-text">Algunos instantes de esta historia.</p>
+
+  <div class="gallery-grid">
+    <div class="gallery-item">Foto 1</div>
+    <div class="gallery-item">Foto 2</div>
+    <div class="gallery-item large">Foto portada</div>
+    <div class="gallery-item">Foto 3</div>
+    <div class="gallery-item">Foto 4</div>
+  </div>
+
+  <div class="gallery-hashtag">#LuciYGonza2027</div>
+  <p class="gallery-hashtag-hint">Us&aacute; el hashtag en tus stories y publicaciones.</p>
+</section>
+
+<!-- FOOTER -->
+<section class="footer">
+  <div class="footer-flower">&#10048;</div>
+  <div class="footer-quote">&ldquo;El amor en flor&hellip;&rdquo;</div>
+  <div class="footer-text">Los esperamos en el jard&iacute;n.</div>
+  <div class="footer-names">Luciana & Gonzalo</div>
+  <div class="footer-date">14 &middot; 03 &middot; 2027</div>
+</section>
+
+</body>
+</html>

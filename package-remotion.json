@@ -1,0 +1,21 @@
+{
+  "name": "remotion-reel-invitacion",
+  "version": "1.0.0",
+  "description": "Reel de invitación de boda usando Remotion",
+  "scripts": {
+    "start": "npx remotion studio",
+    "build": "npx remotion render src/index.tsx InvitacionReel out/reel.mp4",
+    "render": "npx remotion render src/index.tsx InvitacionReel out/reel.mp4"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.242",
+    "@remotion/bundler": "4.0.242",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "4.0.242"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "typescript": "^5.5.0"
+  }
+}
