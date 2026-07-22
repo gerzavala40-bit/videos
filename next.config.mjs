@@ -6,6 +6,11 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   transpilePackages: ['studio', 'ai-agent', 'workflow-builder', 'design-agent'],
+  turbopack: {
+    resolveAlias: {
+      '@/*': ['./*'],
+    },
+  },
   webpack: (config) => {
     config.resolve.alias['@'] = resolve(__dirname);
     return config;
